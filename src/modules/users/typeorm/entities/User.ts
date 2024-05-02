@@ -1,7 +1,9 @@
+import Experience from '@modules/topics/typeorm/entities/Experience';
 import {
   Column,
   CreateDateColumn,
   Entity,
+  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -28,6 +30,9 @@ class User {
 
   @UpdateDateColumn()
   updated_at: Date;
+
+  // @OneToMany(() => Experience, exp => exp.user)
+  // exp: Experience[];
 }
 
 export default User;
